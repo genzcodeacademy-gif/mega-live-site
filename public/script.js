@@ -65,8 +65,9 @@ function sendMessage() {
 function sendMessage() {
     const query = document.getElementById('consoleInput').value;
     // 1. Send to your server
-    fetch('/api/support-queries', {
-        method: 'POST',
+    fetch('/api/register', { 
+    method: 'POST',
+    // ... the rest of your code stays exactly the same
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: query, timestamp: new Date() })
     });
