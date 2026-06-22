@@ -67,8 +67,8 @@ function sendMessage() {
     // 1. Send to your server
     fetch('/api/register', { 
     method: 'POST',
-    // ... the rest of your code stays exactly the same
-        headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
+    // ... leave the rest of the code the same
         body: JSON.stringify({ query: query, timestamp: new Date() })
     });
     // ... (existing code to show message in bubble)
