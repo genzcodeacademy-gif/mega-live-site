@@ -372,14 +372,20 @@ footer { background: #050506; border-top: 1px solid var(--border-gold-low); padd
     header { padding: 15px 20px; }
     .nav-links, .header-actions { display: none; }
     .section-container { padding: 70px 5%; }
-    .hero-section { background: linear-gradient(to top, rgba(10,10,11,1) 60%, rgba(10,10,11,0.7)), url('banner.png') no-repeat center center/cover; height: auto; padding: 100px 5% 60px; }
-    .hero-container h1 { font-size: 36px; }
+    .hero-section {
+        background:linear-gradient(to top, rgba(10,10,11,1) 60%, rgba(10,10,11,0.7)), url('banner.png') no-repeat center center/cover;/* your gradient stuff */ ;
+        height: auto;
+        padding: 100px 5% 60px;
+        flex-direction: column; /* THIS IS THE MAGIC KEY */
+        text-align: center; /* This centers the text nicely on phones */
+    }
+}
     .footer-core-grid { grid-template-columns: 1fr; gap: 40px; }
     .interactive-form-pane, .payment-details-pane { padding: 30px; border-right: none; }
     .your-flex-section-name {
     flex-direction: column;
 }
-}
+
 /* This targets the dropdown specifically */
 select {
     color: #333333; /* Dark text so it is visible */
