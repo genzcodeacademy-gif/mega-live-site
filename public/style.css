@@ -368,23 +368,41 @@ footer { background: #050506; border-top: 1px solid var(--border-gold-low); padd
 .chat-box-input-area button { width: 20%; background: transparent; border: none; color: var(--gold-primary); font-size: 16px; cursor: pointer; }
 
 @media (max-width: 991px) {
-    .grid-two-col, .grid-three-col, .grid-four-col { grid-template-columns: 1fr; }
-    header { padding: 15px 20px; }
-    .nav-links, .header-actions { display: none; }
-    .section-container { padding: 70px 5%; }
+    /* --- General Layout Resets --- */
+    .grid-two-col, .grid-three-col, .grid-four-col { 
+        grid-template-columns: 1fr; 
+    }
+    header { 
+        padding: 15px 20px; 
+    }
+    .nav-links, .header-actions { 
+        display: none; 
+    }
+    .section-container { 
+        padding: 70px 5%; 
+    }
     
+    /* --- Hero Banner --- */
     .hero-section { 
         background: linear-gradient(to top, rgba(10,10,11,1) 60%, rgba(10,10,11,0.7)), url('banner.png') no-repeat center center/cover; 
         height: auto; 
         padding: 100px 5% 60px; 
+        display: flex;
         flex-direction: column; 
         text-align: center; 
     }
     
-    .footer-core-grid { grid-template-columns: 1fr; gap: 40px; }
-    .interactive-form-pane, .payment-details-pane { padding: 30px; border-right: none; }
+    /* --- Footer & Form Panes --- */
+    .footer-core-grid { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
+    .interactive-form-pane, .payment-details-pane { 
+        padding: 30px; 
+        border-right: none; 
+    }
 
-    /* --- 1. Fixed Profile --- */
+    /* --- 1. Fixed Faculty Profile --- */
     .faculty-profile-card { 
         display: flex;
         flex-direction: column;
@@ -404,14 +422,16 @@ footer { background: #050506; border-top: 1px solid var(--border-gold-low); padd
     /* --- 3. Fixed Form Inputs & QR Code --- */
     .qr-vault-wrapper,
     .input-row-twin {
-        display: flex !important; /* Overrides the inline HTML style */
+        display: flex !important; /* Forces the inline HTML style to stack */
         flex-direction: column !important;
         align-items: center;
         width: 100%;
+        gap: 0; /* Removes the horizontal gap */
     }
 
     .input-row-twin input {
-        margin-bottom: 10px; /* Adds breathing room between the two text boxes */
+        margin-bottom: 10px; /* Adds vertical breathing room */
+        width: 100% !important;
     }
 
     .interactive-form-pane input, 

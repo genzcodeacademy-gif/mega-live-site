@@ -1,6 +1,11 @@
-document.getElementById('studentForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
+// ==========================================
+// 1. ENROLLMENT FORM HANDLING
+// ==========================================
 
+async function handleFormSubmit(event) {
+    event.preventDefault(); // Stops the page from reloading
+
+    // Grab the data from the input fields
     const nameValue = document.getElementById('studentName').value;
     const emailValue = document.getElementById('studentEmail').value;
 
@@ -12,83 +17,60 @@ document.getElementById('studentForm').addEventListener('submit', async (event) 
         });
 
         const result = await response.json();
-        alert(result.message);
 
-        document.getElementById('studentName').value = '';
-        document.getElementById('studentEmail').value = '';
+        // Hide the form and show the professional success message
+        document.getElementById('studentForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+
     } catch (error) {
-        console.error("Error:", error);
-    }
-});
-async function handleFormSubmit(event) {
-    event.preventDefault(); // This stops the page from reloading
-    console.log("Submit button was clicked!"); // If you don't see this in the console, the function isn't connected
-    
-    // ... rest of your fetch code
-}
-function sendMessage() {
-    const input = document.getElementById('consoleInput');
-    const body = document.getElementById('consoleBody');
-    if (input.value.trim() !== "") {
-        // Add user message
-        body.innerHTML += `<div class="message">You: ${input.value}</div>`;
-        // Simulate a system response
-        setTimeout(() => {
-            body.innerHTML += `<div class="message incoming">Console: Message received. Our team will review this query.</div>`;
-            body.scrollTop = body.scrollHeight; // Auto-scroll to bottom
-        }, 500);
-        input.value = "";
+        console.error("Error submitting form:", error);
+        alert("Something went wrong with the submission. Please try again.");
     }
 }
 
-function toggleConsole() {
-    const body = document.getElementById('consoleBody');
-    body.style.display = (body.style.display === 'none') ? 'block' : 'none';
-}
-function sendMessage() {
-    const input = document.getElementById('consoleInput');
-    const body = document.getElementById('consoleBody');
-    if (input.value.trim() !== "") {
-        // User message
-        body.innerHTML += `<div class="message outgoing">${input.value}</div>`;
-        
-        // Auto-reply simulation
-        setTimeout(() => {
-            body.innerHTML += `<div class="message incoming">Thanks! Our team will respond shortly.</div>`;
-            body.scrollTop = body.scrollHeight; 
-        }, 600);
-        
-        input.value = "";
-        body.scrollTop = body.scrollHeight;
-    }
-}
-function sendMessage() {
-    const query = document.getElementById('consoleInput').value;
-    // 1. Send to your server
-    fetch('/api/register', { 
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    // ... leave the rest of the code the same
-        body: JSON.stringify({ query: query, timestamp: new Date() })
-    });
-    // ... (existing code to show message in bubble)
-}
-// Toggle the Support Desk
+// Attach the function to the form
+document.getElementById('studentForm').addEventListener('submit', handleFormSubmit);
+
+
+// ==========================================
+// 2. SUPPORT DESK CHAT WIDGET
+// ==========================================
+
+// Open the Chat Box
 document.getElementById('initiateChat').addEventListener('click', () => {
-    const chatBox = document.getElementById('academyChatBox');
-    chatBox.style.display = 'block';
+    document.getElementById('academyChatBox').style.display = 'block';
 });
 
-// Close button
+// Close the Chat Box
 document.getElementById('dismissChat').addEventListener('click', () => {
     document.getElementById('academyChatBox').style.display = 'none';
-});function sendMessage() {
-    console.log("Button clicked!"); // If you see this in the console, the button IS working, but the code inside is failing.
-    // ... rest of your code
+});
+
+// Send a Message in the Chat
+function sendMessage() {
+    const input = document.getElementById('consoleInput');
+    const body = document.getElementById('consoleBody');
+    const query = input.value.trim();
+
+    if (query !== "") {
+        // 1. Post the user's message
+        body.innerHTML += `<div class="message outgoing">You: ${query}</div>`;
+        
+        // 2. Clear the input box and scroll to bottom
+        input.value = "";
+        body.scrollTop = body.scrollHeight; 
+
+        // 3. Simulate a system auto-reply after a short delay
+        setTimeout(() => {
+            body.innerHTML += `<div class="message incoming">Support: Message received. Our team will review your query and respond shortly.</div>`;
+            body.scrollTop = body.scrollHeight; // Scroll to bottom again after reply
+        }, 600);
+    }
 }
-// Add this to your script.js or inside your <script> tag
+
+// Allow sending messages by pressing the 'Enter' key
 document.getElementById('consoleInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-        sendMessage(); // This calls your function when they hit Enter
+        sendMessage(); 
     }
 });
