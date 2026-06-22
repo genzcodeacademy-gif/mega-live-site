@@ -376,6 +376,9 @@ footer { background: #050506; border-top: 1px solid var(--border-gold-low); padd
     .hero-container h1 { font-size: 36px; }
     .footer-core-grid { grid-template-columns: 1fr; gap: 40px; }
     .interactive-form-pane, .payment-details-pane { padding: 30px; border-right: none; }
+    .your-flex-section-name {
+    flex-direction: column;
+}
 }
 /* This targets the dropdown specifically */
 select {
