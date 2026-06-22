@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genz Code Academy | Code Today. Create Tomorrow. Lead Forever.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+
+    <a href="https://wa.me/1234567890" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    
+    </a>
+    
+<div class="premium-chat-box" id="academyChatBox" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; background: #0f0f0f; border: 1px solid #d4af37; border-radius: 12px; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+    <div class="chat-box-header" style="background: #d4af37; padding: 12px; display: flex; justify-content: space-between; align-items: center; color: #000; font-weight: bold;">
+        <span>Genz Support Desk</span>
+        <span id="dismissChat" style="cursor: pointer; font-size: 1.2rem;">×</span>
+    </div>
+    <div class="chat-box-body" style="height: 250px; overflow-y: auto; padding: 15px; color: #fff;">
+        <p>Welcome to Genz Code Academy! How can we help?</p>
+        <div id="contactDetails" style="margin-top: 15px; border-top: 1px solid #444; padding-top: 10px;">
+            <p><i class="fas fa-phone"></i> +91 6369216076</p>
+            <p><i class="fas fa-envelope"></i> genzcodeacademy@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Force the element to exist and listen
+    const launcher = document.getElementById('initiateChat');
+    const chatBox = document.getElementById('academyChatBox');
+    const closer = document.getElementById('dismissChat');
+
+    if (launcher) {
+        launcher.addEventListener('click', () => {
+            chatBox.style.display = 'block';
+        });
+    }
+    
+    if (closer) {
+        closer.addEventListener('click', () => {
+            chatBox.style.display = 'none';
+        });
+    }
+</script>
+
+
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Genz Code Academy Logo" class="brand-logo">
+            <div class="logo-text">GENZ CODE <span>ACADEMY</span></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#enrollment-section" class="btn-cta-nav">Enroll Now</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <span class="badge"><i class="fas fa-crown"></i> Elite Tech Training Ecosystem</span>
+            <h1>Learn Digital Skills &<br><span class="text-gradient">Start Earning Online</span></h1>
+            <p class="hero-tagline">“Code Today. Create Tomorrow. Lead Forever.”</p>
+            <p class="hero-desc">Master premium software architecture, high-ticket copywriting, systemic content strategy, and global freelancing mechanics straight from executive-level mentors.</p>
+            <div class="hero-cta-group">
+                <a href="#enrollment-section" class="btn-cta-nav">Enroll Safely Now</a>
+                <a href="https://forms.gle/3yW5xYokp6eJRSLZA" class="btn btn-outlined" target="_blank">Book Free Demo</a>
+                <a href="#" class="btn btn-text" download><i class="fas fa-arrow-down-to-line"></i>  <a href="https://drive.google.com/file/d/1jUyHHJPOU4wFeySC4V9V_HW6mttNHHN1/view?usp=drive_link" 
+   style="color: white; text-decoration: none; font-size: 18px;">
+   Download Syllabus
+</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-container">
+        <div class="section-title">
+            <span>WHO WE ARE</span>
+            <h2>Architecting High-Yield Tech Careers</h2>
+            <div class="title-gold-line"></div>
+        </div>
+        <div class="grid-two-col">
+            <div class="about-card-narrative">
+                <h3>Academy Introduction</h3>
+                <p> Welcome to Genz Code Academy.
+
+Genz Code Academy is a 100% online learning platform dedicated to helping students, graduates, and aspiring professionals build job-ready digital skills. We provide practical training in Digital Marketing, Social Media Management, Content Writing, and Freelancing, with a strong focus on real-world application and career growth.
+
+Our mission is to make quality education accessible, affordable, and industry-focused, empowering learners to gain confidence, develop expertise, and create successful careers in the digital world.
+
+Learn. Build. Grow. Succeed.
+                </p>
+                
+                <div class="vision-mission-box">
+                    <div>
+                        <h4>Our Mission</h4>
+                        <p>To empower individuals with industry-relevant skills, real-world experience, and the confidence to excel in today's competitive digital landscape.</p>
+                    </div>
+                    <div>
+                        <h4>Our Vision</h4>
+                        <p>To be a globally recognized academy that transforms ambitious learners into highly sought-after digital professionals and entrepreneurs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="why-us-box">
+                <h3>The Genz Code Standard</h3>
+                <ul class="premium-feature-list">
+                    <li>
+                        <div class="icon-wrap"><i class="fas fa-terminal"></i></div> 
+                        <div><strong>Expert-Led Interactive Training</strong><p>Direct live lab workspaces mentored exclusively by active senior engineering leads.</p></div>
+                    </li>
+                    <li>
+                        <div class="icon-wrap"><i class="fas fa-cube"></i></div> 
+                        <div><strong>Real-World Capstone Projects</strong><p>No toy applications. You will build and deploy complex multi-tenant cloud ecosystems.</p></div>
+                    </li>
+                    <li>
+                        <div class="icon-wrap"><i class="fas fa-award"></i></div> 
+                        <div><strong>Certification & Career Infrastructure</strong><p>ISO-mapped cryptographic graduation credentials backed by an elite career support desk.</p></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section-container alternate-bg">
+        <div class="section-title">
+            <span>CURATED CURRICULUMS</span>
+            <h2>Our High-Ticket Core Programs</h2>
+            <div class="title-gold-line"></div>
+        </div>
+        <div class="grid-three-col">
+            <div class="course-card">
+                <div class="course-tag">Most Popular</div>
+                <h3>Digital Marketing</h3>
+                <div class="course-meta"><span><i class="far fa-clock"></i> 15 Days</span> <span><i class="far fa-credit-card"></i> ₹ 3,499</span></div>
+                <p>Digital Marketing is not just a skill—it's the engine behind modern business growth. Master the strategies that build brands, attract customers, and create limitless career opportunities in the digital age.
+</p>
+                <div class="course-perks"><small><i class="fas fa-shield-halved"></i> Includes Certification & Placement Support</small></div>
+                <a href="https://drive.google.com/file/d/13qRsywNqepbMCSDYHqKDnb2PAoR9AuGy/view?usp=drive_link" class="course-link-btn">Explore Syllabus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="course-card">
+                <div class="course-tag">Trending</div>
+                <h3>Social Media Management & Growth</h3>
+                <div class="course-meta"><span><i class="far fa-clock"></i> 15 Days</span> <span><i class="far fa-credit-card"></i> ₹3,499</span></div>
+                <p>Social Media Management is the art of building brands, engaging audiences, and driving business growth through powerful digital communication. Master the skills to create impact, influence decisions, and grow in the digital world.</p>
+                <div class="course-perks"><small><i class="fas fa-shield-halved"></i> Includes Certification & Placement Support</small></div>
+                <a href="https://drive.google.com/file/d/13qRsywNqepbMCSDYHqKDnb2PAoR9AuGy/view?usp=drive_link" class="course-link-btn">Explore Syllabus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="course-card">
+                <h3>Content Writing</h3>
+                <div class="course-meta"><span><i class="far fa-clock"></i> 10 Days</span> <span><i class="far fa-credit-card"></i> ₹ 2,499</span></div>
+                <p>Content Writing is the power of turning ideas into impact. Learn to create compelling content that informs, engages, and inspires audiences while driving business growth.</p>
+                <div class="course-perks"><small><i class="fas fa-shield-halved"></i> Includes Certification & Placement Support</small></div>
+                <a href="https://drive.google.com/file/d/13qRsywNqepbMCSDYHqKDnb2PAoR9AuGy/view?usp=drive_link" class="course-link-btn">Explore Syllabus <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="course-card">
+                <h3>Artificial Intelligence</h3>
+                <div class="course-meta"><span><i class="far fa-clock"></i> 1.5 months</span> <span><i class="far fa-credit-card"></i> ₹ 6,999</span></div>
+                <p>Learn ChatGPT, Prompt Engineering, AI Automation, Image Generation, Video Creation, and Business Applications with hands-on projects. No coding experience required.
+
+✔ Live Training | ✔ Practical Projects | ✔ Certificate | ✔ Career Guidance</p>
+                <div class="course-perks"><small><i class="fas fa-shield-halved"></i> Includes Certification & Placement Support</small></div>
+                <a href="https://drive.google.com/file/d/1jUyHHJPOU4wFeySC4V9V_HW6mttNHHN1/view?usp=drive_link" class="course-link-btn">Explore Syllabus <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+         <div class="course-card">
+                <h3>Freelancing Guidance</h3>
+                <div class="course-meta"><span><i class="far fa-clock"></i>7 days</span> <span><i class="far fa-credit-card"></i> ₹ 1,999</span></div>
+                <p>Freelancing empowers you to turn your skills into income, work with clients worldwide, and build a career on your own terms.</p>
+                <div class="course-perks"><small><i class="fas fa-shield-halved"></i> Includes Certification & Placement Support</small></div>
+                <a href="https://drive.google.com/file/d/13qRsywNqepbMCSDYHqKDnb2PAoR9AuGy/view?usp=drive_link" class="course-link-btn">Explore Syllabus <i class="fas fa-arrow-right"></i></a>
+            </div>
+        
+    </section>
+
+    <section id="faculty" class="section-container alternate-bg">
+        <div class="section-title">
+            <span>ELITE FREELANCING FACULTY</span>
+            <h2>Learn From Practitioners, Not Academics</h2>
+            <div class="title-gold-line"></div>
+        </div>
+        <div class="grid-two-col">
+            <div class="faculty-profile-card principal-instructor">
+                <div class="faculty-avatar-container">
+                    <img src="profile.png" alt="Founder Portrait" class="faculty-img">
+                </div>
+                <div class="faculty-details">
+                    <span class="fac-badge">Founder & Principal Instructor</span>
+                    <h3>Lead Systems Architect</h3>
+                    <p class="fac-meta">Passionate educator and digital skills mentor dedicated to helping students and aspiring professionals build successful careers in the digital world. Specializing in Digital Marketing, Social Media Management, Content Writing, and Freelancing, with a focus on practical learning, real-world projects, and career growth.</p>
+                    <p class="fac-bio">Committed to empowering learners with industry-relevant skills, confidence, and the guidance needed to thrive in today's competitive digital landscape.</p>
+                    <div class="fac-tags"><span>Digital Marketing</span> <span>Social Media Management</span>
+                         <span>Content Writing</span><span>Freelancing Mentorship</span><span>Artificial Intelligence</span></div>
+                </div>
+            </div>
+            <section class="team-container">
+    <h2 style="color: #ffd700; text-align: center; margin-bottom: 40px;">Our Team</h2>
+    
+    <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <div class="team-card"><h3>Trainers & Mentors</h3>
+            <p><strong>Social Media:</strong> P. Nivetha</p>
+            <p><strong>Content Writing:</strong> V. Priyadharshini</p>
+            <p><strong>Digital Marketing:</strong> M. Harini</p>
+            <p><strong>Freelancing:</strong> K. Monisha</p>
+            <p><strong>Artificial Intelligence:</strong> K. Mega</p>
+        </div>
+
+        <div class="team-card"><h3>Student Success</h3>
+            <p>K. Anitha | R. Saravanan | M. Divya</p>
+        </div>
+
+        <div class="team-card"><h3>Admissions</h3>
+            <p>P. Santhosh | T. Nandhini | V. Praveen</p>
+        </div>
+
+        <div class="team-card"><h3>Marketing</h3>
+            <p>S. Abinaya | R. Lokesh | K. Harish</p>
+        </div>
+
+        <div class="team-card"><h3>Operations & Admin</h3>
+            <p>M. Kavya | A. Dinesh | P. Janani</p>
+        </div>
+
+        <div class="team-card"><h3>Placement Support</h3>
+            <p>R. Yogesh | S. Deepika | K. Pranesh</p>
+        </div>
+
+        <div class="team-card"><h3>Technology</h3>
+            <p>V. Kishore | T. Akash | D. Shalini</p>
+        </div>
+
+        <div class="team-card"><h3>Finance</h3>
+            <p>P. Balaji | M. Gayathri | R. Suresh</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .team-card { background: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333; color: #fff; }
+    .team-card h3 { color: #ffd700; margin-top: 0; font-size: 1.2em; border-bottom: 1px solid #444; padding-bottom: 10px; }
+    .team-card p { margin: 8px 0; font-size: 0.95em; }
+</style>
+    </section>
+
+    <section id="testimonials" class="section-container">
+        <div class="section-title">
+            <span>WALL OF PROOF</span>
+            <h2>Real Outcomes. Built By Real Students.</h2>
+            <div class="title-gold-line"></div>
+        </div>
+        <div class="grid-two-col">
+            <div class="testimonial-card">
+                <div class="quote-mark">“</div>
+                <p class="testimonial-text">"Genz Code Academy completely transformed my career path. The freelancing frameworks helped me replace my traditional salary structure within 15 days of completion."</p>
+                <div class="student-profile">
+                    <div><strong>Elanji N</strong><p>Independent Content Writer</p></div>
+                </div>
+                
+            <div class="testimonial-card">
+                <div class="quote-mark">“</div>
+                <p class="testimonial-text">"The copywriting templates are incredibly reliable. I went from sending unread proposals to closing consistent $2,500/month recurring foreign retainers."</p>
+                <div class="student-profile">
+                    <div><strong>Jordan K.</strong><p>Conversion Copywriter</p></div>
+                </div>
+                <div class="testimonial-card">
+    <div class="quote-mark">“</div>
+    <p class="testimonial-text">"Before joining the academy, I was struggling to find consistent freelance leads. The systematic content strategy taught here helped me land my first three international clients within just two months."</p>
+    <div class="student-profile">
+        <div><strong>Priya R.</strong><p>Freelance Content Strategist</p></div>
+    </div>
+</div>
+
+<div class="testimonial-card">
+    <div class="quote-mark">“</div>
+    <p class="testimonial-text">"The social media management modules are top-tier. The mentors didn't just teach me how to post; they taught me the strategy behind brand growth, which helped me land my first agency clients with ease."</p>
+    <div class="student-profile">
+        <div><strong>Arjun S.</strong><p>Social Media Manager</p></div>
+    </div>
+</div>
+
+<div class="testimonial-card">
+    <div class="quote-mark">“</div>
+    <p class="testimonial-text">"I finally understand the mechanics of scaling a business online. The transition from theory to real-world freelancing execution was seamless thanks to the practical roadmap provided by the mentors."</p>
+    <div class="student-profile">
+        <div><strong>Meghna T.</strong><p>Digital Marketing Specialist</p></div>
+    </div>
+</div>
+            
+    
+    </section>
+
+    <section class="section-container alternate-bg">
+        <div class="section-title">
+            <span>PLACEMENT ECOSYSTEM</span>
+            <h2>Engineered For Global Career Acceleration</h2>
+            <div class="title-gold-line"></div>
+        </div>
+        <div class="grid-four-col">
+            <div class="ecosystem-card"><i class="fas fa-address-card"></i> <h4>ATS Resume Design</h4><p>We structure profiles to clear automated screening pathways smoothly.</p></div>
+            <div class="ecosystem-card"><i class="fas fa-laptop-code"></i> <h4>Mock Simulations</h4><p>Live technical coding screens modeled precisely after top tech firm criteria.</p></div>
+            <div class="ecosystem-card"><i class="fas fa-handshake"></i> <h4>Internship Vouching</h4><p>Direct entry validation pathways into active corporate partner pipelines.</p></div>
+            <div class="ecosystem-card"><i class="fas fa-network-wired"></i> <h4>Alumni Network</h4><p>Private workspace communication hub providing immediate active contract leads.</p></div>
+        </div>
+    </section>
+
+    <section id="enrollment-section" style="max-width: 600px; margin: auto; padding: 20px;">
+    <h2 style="color: #ffd700; text-align: center;">Enroll Now</h2>
+
+    <form id="studentForm" onsubmit="handleFormSubmit(event)">
+        <div class="payment-details-pane" style="border: 1px solid #d4af37; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+            <h3 style="color: #d4af37;">Secure Settlement</h3>
+            <p style="color: #fff;">Scan the QR to complete payment before submitting.</p>
+            
+           <div class="qr-vault-wrapper" style="text-align: center; margin: 15px 0;">
+<img src="https://lh3.googleusercontent.com/d/11--y1aye-q1oEb_N7mXHh95L99CGA7ZX" 
+     alt="Scan to Pay" 
+     style="width: 150px; height: 150px; border: 2px solid #d4af37;">
+    
+    <p style="margin-top: 30px;"><strong>UPI:</strong>megakandhan0-1@oksbi</p>
+</div>
+
+            <div class="bank-ledger-table" style="color: #fff;">
+                <div class="ledger-row"><strong>Acc:</strong> 722309257 | <strong>IFSC:</strong> TNSC0010100</div>
+            </div>
+        </div>
+
+        <div class="input-row"><input type="text" id="studentName" placeholder="Full Legal Name" style="width: 100%; padding: 10px; margin-bottom: 10px;" required></div>
+        <div class="input-row-twin" style="display: flex; gap: 10px;">
+            <input type="tel" placeholder="Phone Number" style="width: 100%; padding: 10px;" required>
+            <input type="tel" placeholder="WhatsApp Number" style="width: 100%; padding: 10px;" required>
+        </div>
+        <div class="input-row"><input type="email" id="studentEmail" placeholder="Email Address" style="width: 100%; padding: 10px; margin: 10px 0;" required></div>
+        
+        <div class="input-row">
+            <input type="text" id="transactionId" placeholder="Enter Transaction ID (Reference No.)" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+        </div>
+
+        <div class="input-row">
+            <select required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                <option value="">Choose Specialization Pathway</option>
+                <option value="marketing">Digital Marketing</option>
+                <option value="growth">Social Media Infrastructure & Growth</option>
+                <option value="copy">Content Writing</option>
+                <option value="freelance">Freelancing Guidance</option>
+            </select>
+        </div>
+
+        <div class="input-file-block" style="margin-top: 15px;">
+            <label for="screenshot-file" id="file-label" style="display: block; padding: 15px; border: 2px dashed #555; cursor: pointer; text-align: center; color: #fff;">
+                <span id="label-text">Upload Payment Screenshot</span>
+            </label>
+            <input type="file" id="screenshot-file" accept="image/*" required style="display: none;" onchange="updateFileStatus(this)">
+        </div>
+
+        <button type="submit" class="btn-submit-action" style="background-color: #ffd700; color: black; padding: 15px; width: 100%; border: none; border-radius: 8px; margin-top: 20px; font-weight: bold; cursor: pointer;">
+            Submit Secure Enrollment Application
+        </button>
+    </form>
+
+    <div id="successMessage" style="display: none; text-align: center; color: #4CAF50; margin-top: 20px;">
+        <h3>Successfully Completed!</h3>
+        <p>Thank you for your application. Our team will contact you shortly.</p>
+    </div>
+</section>
+
+    
+                
+
+    <section class="section-container alternate-bg trust-section">
+    <div class="section-title">
+        <span>OUR COMMITMENT TO EXCELLENCE</span>
+        <h2>Why Professionals Trust Genz Code Academy</h2>
+        <div class="title-gold-line"></div>
+    </div>
+    <div class="grid-three-col">
+        <div class="trust-card">
+            <i class="fas fa-check-double" style="color: #d4af37; font-size: 2rem;"></i>
+            <h4>Industry-Aligned Curriculum</h4>
+            <p>Our modules are designed by real-world engineers, focusing on skills that are currently in high demand in the tech market.</p>
+        </div>
+        <div class="trust-card">
+            <i class="fas fa-users-gear" style="color: #d4af37; font-size: 2rem;"></i>
+            <h4>Hands-On Mentorship</h4>
+            <p>We don't just teach theory. You get personalized guidance through code reviews, project support, and career counseling.</p>
+        </div>
+        <div class="trust-card">
+            <i class="fas fa-trophy" style="color: #d4af37; font-size: 2rem;"></i>
+            <h4>Proven Student Success</h4>
+            <p>Join a community of graduates who have successfully transitioned into professional tech roles through our rigorous training tracks.</p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+    <footer id="contact">
+        <div class="footer-core-grid">
+            <div class="corporate-meta-block">
+                <div class="logo-container" style="margin-bottom: 20px;">
+                    <img src="logo.png" alt="GEnz Code Academy Logo" class="brand-logo">
+                    <div class="logo-text">GENZ CODE <span>ACADEMY</span></div>
+                </div>
+                <p class="brand-pitch">Training the next generation of global digital builders with elite, performance-backed engineering and high-ticket monetization tracks.</p>
+                <div class="contact-telemetry-lines">
+                    <p><i class="fas fa-phone-volume"></i> +91 6369216076</p>
+                    <p><i class="fas fa-envelope-open"></i> genzcodeacademy@gmail.com</p>
+                    <p><i class="fas fa-building"></i> 5/623, sellanthikanahalli, palacode, Dharmapuri.</p>
+                </div>
+        
+            </div>
+            
+        
+        </div>
+        <div class="footer-legal-base">
+            <p>© 2026 Genz Code Academy Private Limited. All institutional frameworks protected.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Framework</a>
+                <a href="#">Terms of Deployment</a>
+                <a href="#">Refund Protocols</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="premium-chat-box" id="academyChatBox">
+        <div class="chat-box-header">
+            <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <div>
+                    <h5>Genz Support Desk</h5>
+                    <p>Response Latency: Live</p>
+                </div>
+            </div>
+            <span id="dismissChat" class="chat-dismiss-btn">×</span>
+        </div>
+        <div class="chat-box-body">
+            <p class="incoming-bubble">Welcome to GEnz Code Academy. Let me know if you have questions about our upcoming cohort modules, syllabus breakdowns, or payment verifications!</p>
+        </div>
+        <div class="chat-box-input-area">
+            <input type="text" placeholder="Inquire about pathways..." id="chatUserField">
+            <button id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="premium-chat-launcher" id="initiateChat">
+        <i class="fas fa-comment-dots"></i> Support Desk
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function handleFormSubmit(event) {
+        // 1. Stop the page from reloading/refreshing
+        event.preventDefault();
+
+        // 2. Hide the form
+        document.getElementById('studentForm').style.display = 'none';
+
+        // 3. Show the success message
+        document.getElementById('successMessage').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
