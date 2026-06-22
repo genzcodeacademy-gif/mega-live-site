@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 // 1. Connect to MongoDB (This assumes MongoDB is running on your computer locally)
 // 💡 Change 27001 to 27017!
-mongoose.connect('mongodb://localhost:27017/genz_academy')
+mongoose.connect('mongodb+srv://megakandhan0_db_user:dcH6RfffuySyGx1W@cluster0...')
   .then(() => console.log("Connected to MongoDB successfully! 🎉"))
   .catch((err) => console.error("Could not connect to MongoDB:", err));
 
